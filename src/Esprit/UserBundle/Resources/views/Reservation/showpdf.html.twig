@@ -1,0 +1,114 @@
+
+<div class="bs-docs-example">
+    <h5>list of host reservations</h5>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ref</th>
+
+            <th>Host's name</th>
+            <th>Date of arrival</th>
+            <th>Date of departure </th>
+            <th>Night's number</th>
+            <th>Price</th>
+            <th>date of booking</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for reservation in Reservations if reservation.type|upper=="HOTE" and reservation.dateSortieH|date("d/m/Y")>="now"|date("m/d/Y") %}
+            <tr>
+                <td>{{ reservation.ref }}</td>
+
+                <td>{{ reservation.refHebergementFk.nom }}</td>
+                <td>{{ reservation.dateArriveeH|date("d/m/Y") }}</td>
+                <td>{{ reservation.dateSortieH|date("d/m/Y") }}</td>
+                <td>{{ reservation.nbreNuits }}</td>
+                <td>{{ reservation.prixTotal }}</td>
+                <td>{{ reservation.dateCreation|date("d/m/Y") }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+    <h5>list of hotel reservations</h5>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ref</th>
+            <th>Hotel's name</th>
+            <th>Date of arrival</th>
+            <th>Date of departure </th>
+            <th>Night's number</th>
+            <th>Adult's Number</th>
+            <th>Children's number</th>
+            <th>Single Room</th>
+            <th>Double Room</th>
+            <th>Price</th>
+            <th>date of booking</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for reservation in Reservations if reservation.type|upper=="HOTEL" and reservation.dateSortieH|date("d/m/Y")>="now"|date("m/d/Y") %}
+            <tr>
+                <td>{{ reservation.ref }}</td>
+                <td>{{ reservation.refHebergementFk.nom  }}</td>
+                <td>{{ reservation.dateArriveeH|date("d/m/Y") }}</td>
+                <td>{{ reservation.dateSortieH|date("d/m/Y") }}</td>
+                <td>{{ reservation.nbreNuits }}</td>
+                <td>{{ reservation.nbreAdultes }}</td>
+                <td>{{ reservation.nbreEnfants }}</td>
+                <td>{{ reservation.nbreChbreSingle }}</td>
+                <td>{{ reservation.nbreChbreDouble }}</td>
+                <td>{{ reservation.prixTotal }}</td>
+                <td>{{ reservation.dateCreation|date("d/m/Y") }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    <h5>list of flight reservations</h5>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ref</th>
+            <th>Flight's number</th>
+            <th>Date of arrival</th>
+            <th>Date of departure </th>
+
+            <th>Price</th>
+            <th>date of reserving</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for reservation in Reservations if reservation.type|upper=="VOL" and reservation.dateSortieH|date("d/m/Y")>="now"|date("m/d/Y") %}
+            <tr>
+                <td>{{ reservation.ref }}</td>
+                <td>{{ reservation.refVolFk.numVol }}</td>
+                <td>{{ reservation.dateArriveeH|date("d/m/Y") }}</td>
+                <td>{{ reservation.getRefVolFk().datedepartaller|date("d/m/Y") }}</td>
+
+                <td>{{ reservation.prixTotal }}</td>
+                <td>{{ reservation.dateCreation|date("d/m/Y") }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+
+
+
+
+
+

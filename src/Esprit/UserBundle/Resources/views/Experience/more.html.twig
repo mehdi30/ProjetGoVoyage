@@ -1,0 +1,35 @@
+{% extends "EspritUserBundle::base1.html.twig" %}
+{% block body %}
+    <br>
+
+    <hr>
+    <h3 class="page-header"> {{ Experience.title }} <br> <img src="{{ asset('uploads/images/' ~ Experience.image)  }}" width ="200" height ="200"> </h3> <br>
+
+    <ul class="list-group">
+        <li class="list-group-item"><b>Description :</b> <br>{{ Experience.description }}</li>
+
+        <li class="list-group-item"><b>Published on :</b>  {{ Experience.date|date('F j, Y, g:i a') }}</li>
+
+                <div class="vote">
+                    <div class ="vote_bar">
+                        <div class="vote_progress" ></div>
+                    </div>
+                    <div class="vote_btns"> <a  href=" {{ path('reportExperience',{'id' : Experience.id}) }}"><i class="fa fa-exclamation"></i>  {{ Experience.reported }}</a>
+                        <div class="vote_btn vote_like">
+                            <a  href=" {{ path('likeExperience',{'id' : Experience.id}) }}"><i class="fa fa-thumbs-up"></i>  {{ Experience.likeCount }}</a>
+                        </div>
+                        <div class="vote_btn vote_dislike">
+                            <a  href=" {{ path('dislikeExperience',{'id' : Experience.id}) }}"><i class="fa fa-thumbs-down"></i> {{ Experience.dislikeCount }}</a>
+                        </div>
+                    </div>
+                </div>
+
+
+    </ul>
+    <br>
+
+    <br>
+
+
+    <a class="btn btn-default" href="{{ path('listExperience')}}">Back to All</a>
+{% endblock %}

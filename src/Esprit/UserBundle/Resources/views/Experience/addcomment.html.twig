@@ -1,0 +1,31 @@
+{% extends "EspritUserBundle::base1.html.twig" %}
+{% block body %}
+
+
+                <h4>Leave a Comment</h4>
+                <form class="form-horizontal" method="post" action="{{ path('addcomment',{'ide':Experience.id}) }}">
+
+
+                    <div class="control-group">
+                        <label class="control-label" for="inputPassword">Comment <sup>*</sup></label>
+                        <div class="controls">
+                            <textarea name="contenu" cols="2" rows="20"></textarea>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+
+
+                            <button type="submit" class="btn btn-success">
+                                <i
+                                        class=" icon-pencil"></i>Comment
+                            </button>
+
+
+                        </div>
+                    </div>
+                </form>
+
+
+
+{% endblock %}

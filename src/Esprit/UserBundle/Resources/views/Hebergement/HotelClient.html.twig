@@ -1,0 +1,239 @@
+<!--
+	Author: W3layouts
+	Author URL: http://w3layouts.com
+	License: Creative Commons Attribution 3.0 Unported
+	License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tourism a Travel Category Flat bootstrap Responsive website Template | Gallery :: w3layouts</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Tourism web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--// Meta tag Keywords -->
+    <!-- css files -->
+    <link rel="stylesheet" href="{{asset("css/bootstrap.css") }}"> <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{{asset("css/style.css")}}" type="text/css" media="all" /> <!-- Style-CSS -->
+    <link rel="stylesheet" href="{{asset("css/font-awesome.css")}}"> <!-- Font-Awesome-Icons-CSS -->
+    <link rel="stylesheet" href="{{asset("css/chocolat.css")}}" type="text/css" media="screen"><!-- chocolate css for gallery light box-->
+    <!-- //css files -->
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Coda:400,800&amp;subset=latin-ext" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext" rel="stylesheet">
+    <!-- //online-fonts -->
+
+</head>
+<body>
+<div class="main-agile banner-2">
+    <!-- header -->
+    <div class="header-w3layouts">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Tourism</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="logo-agile-1">
+
+                <h1><a class="logo" href="{{ path('Template') }}"><i class="fa fa-plane" aria-hidden="true"></i>GoVoyage</a></h1>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            {% block menu %}
+
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li ><a href="{{ path('Template') }}">Home</a></li>
+                        <li ><a class="" href="{{ path('services') }}">Flights</a></li>
+
+                        <li class=""><a class="" href="{{ path('guide') }}">Guide</a></li>
+                        <li><a class="" href="{{ path('experience') }}">Experiences</a></li>
+                        <li class="dropdown menu__item menu__item--current m_nav_item">
+                            <a href="#" class="dropdown-toggle menu__link link link--kumya" data-toggle="dropdown"><span data-letters="Short Codes">Accommodation<b class="caret"></b></span></a>
+                            <ul class="dropdown-menu agile_short_dropdown">
+                                <li><a href="{{ path('HoteClient') }}">host</a></li>
+                                <li><a href="{{ path('HotelClient') }}">Hotels</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="" href="{{ path('contact') }}">Contact Us</a></li>
+                    </ul>
+                    <div class="w3ls-social-icons-2">
+                        <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="pinterest" href="#"><i class="fa fa-google-plus"></i></a>
+                        <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                        <a class="tumblr" href="#"><i class="fa fa-tumblr"></i></a>
+                    </div>
+                </div>
+            {% endblock %}
+            <!-- //navbar-collapse -->
+        </nav>
+    </div>
+    <!-- //header -->
+</div>
+<!-- gallery -->
+<div class="portfolio">
+    <div class="container">
+        <h3 class="agile-title">Hotels</h3>
+        <div class="w3layouts_header">
+            <p><span><a href="{{ path('searchHotel') }}">Reservation</a></span></p>
+        </div>
+        <ul class="simplefilter">
+            <li data-filter="all">All</li>
+            <li data-filter="1">Paris</li>
+            <li data-filter="2">Dubai </li>
+            <li data-filter="3">Tunis </li>
+            <li data-filter="4">Amesterdam </li>
+        </ul>
+
+
+        <div class="filtr-container">
+            <div class="filtr-item gallery-t" data-category="1, 3" data-sort="Busy streets">
+                <a href="images/Altona.jpg" class="b-link-stripe b-animate-go  thickbox">
+                    <figure class="w3ls-gallery">
+                        <img src="{{asset("images/Altona.jpg")}}" class="img-responsive" alt=" " />
+                        <figcaption class="w3layouts-caption">
+                            <h3>Tourism</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class=" filtr-item" data-category="2" data-sort="Luminous night">
+                <a href="images/imageP.jpg" class="b-link-stripe b-animate-go  thickbox">
+                        <figure class="w3ls-gallery">
+                            <img src="{{asset("images/imageP.jpg")}}" class="img-responsive" alt=" " />
+                            <figcaption class="w3layouts-caption">
+                                <h3>Tourism</h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+            <div class=" filtr-item" data-category="1, 3" data-sort="City wonders">
+                <a href="images/Badira1.jpg" class="b-link-stripe b-animate-go  thickbox">
+                    <figure class="w3ls-gallery">
+                        <img src="{{asset("images/Badira1.jpg")}}" class="img-responsive" alt=" " />
+                        <figcaption class="w3layouts-caption">
+                            <h3>Tourism</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item" data-category="3" data-sort="In production">
+                <a href="images/im3.jpg" class="b-link-stripe b-animate-go  thickbox">
+                    <figure class="w3ls-gallery">
+                        <img src="{{asset("images/im3.jpg")}}" class="img-responsive" alt=" " />
+                        <figcaption class="w3layouts-caption">
+                            <h3>Tourism</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class=" filtr-item" data-category="3, 2" data-sort="Industrial site">
+                <a href="images/im4.jpg" class="b-link-stripe b-animate-go  thickbox">
+                    <figure class="w3ls-gallery">
+                        <img src="{{asset("images/im4.jpg")}}" class="img-responsive" alt=" " />
+                        <figcaption class="w3layouts-caption">
+                            <h3>Tourism</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class=" filtr-item" data-category="2, 3" data-sort="Peaceful lake">
+                <a href="images/Badira2.jpg" class="b-link-stripe b-animate-go  thickbox">
+                    <figure class="w3ls-gallery">
+                        <img src="{{asset("images/Badira2.jpg")}}" class="img-responsive" alt=" " />
+                        <figcaption class="w3layouts-caption">
+                            <h3>Tourism</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="  filtr-item" data-category="1, 3" data-sort="City lights">
+                <a href="images/ParadisPalace.jpg" class="b-link-stripe b-animate-go  thickbox">
+                    <figure class="w3ls-gallery">
+                        <img src="{{asset("images/ParadisPalace.jpg")}}" class="img-responsive" alt=" " />
+                        <figcaption class="w3layouts-caption">
+                            <h3>paris</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class=" filtr-item" data-category="2, 2" data-sort="Dreamhouse">
+                <a href="images/TheDilanAmesterdam.jpg" class="b-link-stripe b-animate-go  thickbox">
+                    <figure class="w3ls-gallery">
+                        <img src="{{asset("images/TheDilanAmesterdam.jpg")}}" class="img-responsive" alt=" " />
+                        <figcaption class="w3layouts-caption">
+                            <h3>Tourism</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class=" filtr-item" data-category="4" data-sort="Dreamhouse">
+                <a href="images/HyatAmesterdam.jpg" class="b-link-stripe b-animate-go  thickbox">
+                    <figure class="w3ls-gallery">
+                        <img src="{{asset("images/HyatAmesterdam.jpg")}}" class="img-responsive" alt=" " />
+                        <figcaption class="w3layouts-caption">
+                            <h3>Tourism</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+
+
+
+
+
+                            <!-- //gallery -->
+                            <!-- footer -->
+
+                            <!-- //footer -->
+                            <!-- js-scripts -->
+                            <!-- js -->
+                            <script type="text/javascript" src="{{asset("js/jquery-2.1.4.min.js") }}" ></script>
+                            <script type="text/javascript" src="{{asset("js/bootstrap.js")}}"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
+                            <!-- //js -->
+                            <!-- start-smoth-scrolling -->
+                            <script type="text/javascript" src="{{asset("js/move-top.js")}}"></script>
+                            <script type="text/javascript" src="{{asset("js/easing.js")}}"></script>
+                            <script type="text/javascript">
+                                jQuery(document).ready(function($) {
+                                    $(".scroll").click(function(event){
+                                        event.preventDefault();
+                                        $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                                    });
+                                });
+                            </script>
+                            <!-- start-smoth-scrolling -->
+                            <!-- smooth scrolling -->
+                            <script src="{{asset("js/SmoothScroll.min.js")}}"></script>
+                            <!-- //smooth scrolling -->
+                            <!-- fliter-JavaScript -->
+                            <script src="{{asset("js/jquery.filterizr.js")}}"></script>
+                            <script src="{{asset("js/controls.js")}}"></script>
+                            <script type="text/javascript">
+                                $(function() {
+                                    $('.filtr-container').filterizr();
+                                });
+                            </script>
+                            <!-- //fliter-JavaScript -->
+                            <!-- PopUp-Box-JavaScript -->
+                            <script src="{{asset("js/jquery.chocolat.js")}}"></script>
+                            <script type="text/javascript">
+                                $(function() {
+                                    $('.filtr-item a').Chocolat();
+                                });
+                            </script>
+                            <!-- //PopUp-Box-JavaScript -->
+                            <!-- //js-scripts -->
+</body>
+</html>

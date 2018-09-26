@@ -1,0 +1,42 @@
+{% extends "EspritUserBundle::base1.html.twig" %}
+{% block body %}
+    <br>
+    <h2>Our BlogPosts</h2>
+    <br>
+    <br>
+
+    {% for experience in Experiences %}
+        <div class="container" style="border: 2px;">
+            <ul class="list-group">
+
+
+                <li class="list-group-item"> <b>Title :</b>            <a href=" {{ path('moreExperience',{'id' : experience.id}) }}"><i class="fa fa-clone"></i>{{experience.title}}</a><br>
+                <li class="list-group-item"><b>Image :</b>             <img src="{{ asset('uploads/images/' ~ experience.image)  }}" width ="200" height ="200"><br>
+
+                <li class="list-group-item"> <b>Description :</b>             {{ experience.description }} <br>
+                <li class="list-group-item"> <b>Date Created :</b> {{ experience.date|date('F j, Y, g:i a') }}</li>
+                <li class="list-group-item"> <b>By :</b> {{ experience.username }} <br>
+                <li class="list-group-item"> <i class="fa fa-thumbs-up"></i>  {{ experience.likeCount }}
+                    <i class="fa fa-thumbs-down"></i>  {{ experience.dislikeCount }}
+
+                <li class="list-group-item">  <a href=" {{ path('deleteExperience',{'id' : experience.id}) }}"><i class="fa fa-trash"></i>Delete</a>
+                    <a href=" {{ path('updateExperience',{'id' : experience.id}) }}"><i class="fa fa-pencil"></i>Update</a> </li>
+
+            </ul>
+        </div>
+
+    {% endfor %}
+
+    <div class="navigation text-center">
+        {{ knp_pagination_render(Experiences) }}
+    </div>
+    <br>
+    <h4>Share With Us Your Experience :</h4><a href=" {{ path('addExperience')}}"><i class="fa fa-pencil"></i>Add An Entry</a>
+
+    <h4>Order By The Most Popular : </h4>  <a href=" {{ path('filterExperience')}}"><i class="fa fa-arrow-up"></i>Filter</a>
+    <h4>Order By The Latest Added : </h4>  <a href=" {{ path('filterdateExperience')}}"><i class="fa fa-clock-o"></i>Filter</a>
+    <h4>Back To Normal View : </h4>  <a href=" {{ path('listExperience')}}"><i class="fa fa-book"></i>Normal</a>
+    <h4>Looking For Something More Specific ?</h4> <a style="margin: 5px;" href=" {{ path('findExperience')}}"><i class="fa fa-eye"></i>Find</a>
+    <h4>View The Reported List : </h4>  <a href=" {{ path('filterreportedExperience')}}"><i class="fa fa-exclamation-triangle"></i>Filter</a>
+
+{% endblock %}

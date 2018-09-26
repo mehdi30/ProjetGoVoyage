@@ -1,0 +1,14 @@
+my_app_graphe:
+    resource: "@MyAppGrapheBundle/Resources/config/routing.yml"
+    prefix:   /
+
+esprit_user:
+    resource: "@EspritUserBundle/Resources/config/routing.yml"
+    prefix:   /GoVoyage
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    prefix:   /feten

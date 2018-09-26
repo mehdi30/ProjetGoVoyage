@@ -1,0 +1,34 @@
+{% extends "EspritUserBundle::base1.html.twig" %}
+{% block body %}
+    <br>
+    <br>
+    <h3> Look For a BlogPost</h3>
+    <br>
+    <form method="POST">
+        Look For a Specific Title : <input type="text" name="criteria"/> <button type="submit"> Find</button>
+    </form>
+    <br>
+    <h3> BlogPosts with that Title : <br> </h3>
+    <br>
+    <table border="2">
+        <th>Title</th>
+        <th>description</th>
+
+        {% for experience in Experiences %}
+            <tr>
+                <td> <a href=" {{ path('moreExperience',{'id' : experience.id}) }}"><i class="fa fa-clone"></i>{{experience.title}}</a></td>
+                <td>{{ experience.description }}</td>
+
+
+            </tr>
+
+        {% endfor %}
+
+    </table>
+    <div class="navigation text-center">
+        {{ knp_pagination_render(Experiences) }}
+    </div>
+    <br>
+    <a class="btn btn-default" href="{{ path('listExperience')}}">Back to All</a>
+
+{% endblock %}

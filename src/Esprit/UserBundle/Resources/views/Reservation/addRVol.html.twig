@@ -1,0 +1,18 @@
+{% extends "EspritUserBundle::ReservationTemplate.html.twig" %}
+{% block contact %}
+<h1>welcome to add a flight reservation</h1>
+    {{ form_start(Form) }}
+    <div class="hidden">
+        {{ form_widget (Form.type, {'value': "VOL"}) }}
+
+        {{ form_widget (Form.refClientFk, {'value': "1"}) }}
+        {{ form_widget (Form.refVolFk, {'value': ref}) }}
+
+
+    </div>
+
+    {{ form_rest(Form) }}
+    {{ form_end(Form) }}
+
+{% endblock %}
+

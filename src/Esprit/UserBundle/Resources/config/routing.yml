@@ -1,0 +1,228 @@
+esprit_go_voyage_homepage:
+    path:     /
+    defaults: { _controller: EspritUserBundle:Default:index }
+Template:
+    path:     /template
+    defaults: { _controller: EspritUserBundle:Template:home }
+services:
+    path:     /services
+    defaults: { _controller: EspritUserBundle:Vol:searchVolC }
+contact:
+    path:     /contact
+    defaults: { _controller: EspritUserBundle:Template:contact }
+guide:
+    path:     /guide
+    defaults: { _controller: EspritUserBundle:Template:guide }
+experience:
+    path:     /experience
+    defaults: { _controller: EspritUserBundle:Template:experience }
+hote:
+    path:     /hote
+    defaults: { _controller: EspritUserBundle:Template:hote }
+hotel:
+    path:     /hotel
+    defaults: { _controller: EspritUserBundle:Template:hotel }
+admin:
+    path:     /admin
+    defaults: { _controller: EspritUserBundle:Security:login }
+admin1:
+    path:     /admin1
+    defaults: { _controller: EspritUserBundle:Registration:register }
+back_home:
+    path:     /back_home
+    defaults: { _controller: EspritUserBundle:Template:back_home }
+addoffre:
+    path:     /addoffre
+    defaults: { _controller: EspritUserBundle:Template:addoffre }
+listoffre:
+    path:     /listoffre
+    defaults: { _controller: EspritUserBundle:Template:listoffre }
+deleteoffre:
+    path:     /deleteoffre
+    defaults: { _controller: EspritUserBundle:Template:deleteoffre}
+updateoffre:
+    path:     /updateoffre
+    defaults: { _controller: EspritUserBundle:Template:updateoffre}
+calendar:
+    path:     /calendar
+    defaults: { _controller: EspritUserBundle:Template:calendar}
+listHebergement:
+    path:   /listHebergement
+    defaults: { _controller: EspritUserBundle:Hebergement:listHebergement }
+deleteHebergement:
+    path:   /deleteHebergement
+    defaults: { _controller: EspritUserBundle:Hebergement:deleteHebergement }
+addHebergement:
+    path:   /addHebergement
+    defaults: { _controller: EspritUserBundle:Hebergement:addHebergement }
+updateHebergement:
+    path:   /updateHebergement
+    defaults: { _controller: EspritUserBundle:Hebergement:updateHebergement }
+listHotel:
+    path:   /listHotel
+    defaults: { _controller: EspritUserBundle:Hebergement:listHotel }
+HoteClient:
+    path:   /HoteClient
+    defaults: { _controller: EspritUserBundle:Hebergement:HoteClient }
+HotelClient:
+    path:   /HotelClient
+    defaults: { _controller: EspritUserBundle:Hebergement:HotelClient }
+listHotelClient:
+    path:   /listHotelClient
+    defaults: { _controller: EspritUserBundle:Hebergement:listHotelClient }
+listHoteClient:
+    path:   /listHoteClient
+    defaults: { _controller: EspritUserBundle:Hebergement:listHoteClient }
+addHotel:
+    path:   /addHotel
+    defaults: { _controller: EspritUserBundle:Hebergement:addHotel  }
+listHote:
+    path:   /listHote
+    defaults: { _controller: EspritUserBundle:Hebergement:listHote }
+addHote:
+    path:   /addHote
+    defaults: { _controller: EspritUserBundle:Hebergement:addHote  }
+searchHotel:
+    path:   /searchHotel
+    defaults: { _controller: EspritUserBundle:Hebergement:searchHotel }
+searchHote:
+    path:   /searchHote
+    defaults: { _controller: EspritUserBundle:Hebergement:searchHote }
+listoffre:
+    path:     /listoffre
+    defaults: { _controller: EspritUserBundle:Template:listoffre }
+updateHote:
+    path:   /updateHote
+    defaults: { _controller: EspritUserBundle:Hebergement:updateHote }
+deleteHote:
+    path:   /deleteHote
+    defaults: { _controller: EspritUserBundle:Hebergement:deleteHote }
+affichageVols:
+    path:     /affichageVols
+    defaults: { _controller: EspritUserBundle:Vol:search2 }
+affichagePast:
+    path:     /affichagePast
+    defaults: { _controller: EspritUserBundle:Vol:affichePast }
+affichageOne:
+    path:     /affichageOne
+    defaults: { _controller: EspritUserBundle:Vol:afficherOne }
+addVol:
+    path:     /addVol
+    defaults: { _controller: EspritUserBundle:Vol:addVol }
+admin_search:
+    path:     /admin_search
+    defaults: { _controller: EspritUserBundle:Vol:search2 }
+addtoPast:
+    path:     /addtoPast
+    defaults: { _controller: EspritUserBundle:Vol:AddtoPast }
+deleteVol:
+    path: /deleteVol
+    defaults: { _controller: EspritUserBundle:Vol:deleteVol }
+updateVol:
+    path: /updateVol
+    defaults: { _controller: EspritUserBundle:Vol:update }
+searchVolC:
+    path: /searchVolC
+    defaults: { _controller: EspritUserBundle:Vol:searchVolC }
+listExperience:
+    path:    /listExperience
+    defaults: { _controller: EspritUserBundle:Experience:list }
+deleteExperience:
+    path:    /deleteExperience
+    defaults: { _controller: EspritUserBundle:Experience:delete }
+updateExperience:
+    path:    /updateExperience
+    defaults: { _controller: EspritUserBundle:Experience:update }
+addExperience:
+    path:    /addExperience
+    defaults: { _controller: EspritUserBundle:Experience:add }
+base:
+    path:     /base
+    defaults: { _controller: EspritUserBundle:Template:base }
+findExperience:
+    path:    /findExperience
+    defaults: { _controller: EspritUserBundle:Experience:find }
+likeExperience:
+    path:    /likeExperience
+    defaults: { _controller: EspritUserBundle:Experience:like }
+dislikeExperience:
+    path:    /dislikeExperience
+    defaults: { _controller: EspritUserBundle:Experience:dislike }
+moreExperience:
+    path:    /moreExperience
+    defaults: { _controller: EspritUserBundle:Experience:more }
+reportExperience:
+    path:    /reportExperience
+    defaults: { _controller: EspritUserBundle:Experience:report }
+filterExperience:
+    path:    /filterExperience
+    defaults: { _controller: EspritUserBundle:Experience:filter }
+filterdateExperience:
+    path:    /filterdateExperience
+    defaults: { _controller: EspritUserBundle:Experience:filterdate }
+addcommentExperience:
+    path:    /addcommentExperience
+    defaults: { _controller: EspritUserBundle:Experience:addcomment }
+experienceback:
+    path:     /experienceback
+    defaults: { _controller: EspritUserBundle:Template:experienceback }
+alistExperience:
+    path:    /alistExperience
+    defaults: { _controller: EspritUserBundle:Experience:alist }
+adeleteExperience:
+    path:    /adeleteExperience
+    defaults: { _controller: EspritUserBundle:Experience:adelete }
+filterreportedExperience:
+    path:    /filterreportedExperience
+    defaults: { _controller: EspritUserBundle:Experience:filterreported }
+grapheChartLine:
+    path:     /chartline
+    defaults: { _controller: EspritUserBundle:Graphe:chartHistogramme }
+piechart:
+    path:     /piechart
+    defaults: { _controller: EspritUserBundle:Graphe:chartPie }
+AfficheReservation :
+    path: /show
+    defaults: { _controller: EspritUserBundle:Reservation:show}
+
+deleteReservation:
+    path: /delete
+    defaults: { _controller: EspritUserBundle:Reservation:delete}
+
+searchReservation:
+    path: /search
+    defaults: { _controller: EspritUserBundle:Reservation:search}
+
+addRVol:
+    path: /addRVol
+    defaults: { _controller: EspritUserBundle:Reservation:addRVol}
+addRHotel:
+    path: /addRHotel
+    defaults: { _controller: EspritUserBundle:Reservation:addRHotel}
+addRHote:
+    path: /addRHote
+    defaults: { _controller: EspritUserBundle:Reservation:addRHote}
+updateRVol:
+    path: /updateRVol
+    defaults: { _controller: EspritUserBundle:Reservation:update}
+updateRHotel:
+    path: /updateRHotel
+    defaults: { _controller: EspritUserBundle:Reservation:update}
+updateRHote:
+    path: /updateRHote
+    defaults: { _controller: EspritUserBundle:Reservation:update}
+updateReservation:
+    path: /update
+    defaults: { _controller: EspritUserBundle:Reservation:update}
+pdfHome:
+    path: /pdfHome
+    defaults: { _controller: EspritUserBundle:Reservation:pdfHome }
+
+esprit_user_homepage:
+    path:     /contactMail
+    defaults: { _controller: EspritUserBundle:Mail:index }
+
+
+esprit_user_accuse:
+    path: /success
+    defaults: { _controller: EspritUserBundle:Mail:success }

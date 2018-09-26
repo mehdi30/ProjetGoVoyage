@@ -1,0 +1,153 @@
+{% extends "EspritUserBundle::ReservationTemplate.html.twig" %}
+{% block contact %}
+    <h4>My history</h4>
+
+
+    <h5>list of reservations</h5>
+    <form method="POST">
+        Search using your type of reservation :
+        <input type="text" name="criteria"/>
+        <input type="submit" value="search"/>
+    </form>
+
+    <div class="bs-docs-example">
+        <h5>list of host reservations</h5>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ref</th>
+                <th>type</th>
+                <th>Date of arrival</th>
+                <th>Date of departure </th>
+                <th>Night's number</th>
+                <th>Price</th>
+                <th>date of booking</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for reservation in Reservations if reservation.type|upper=="HOTE" and reservation.dateSortieH|date("d/m/Y")<"now"|date("d/m/Y") %}
+                <tr>
+                    <td>{{ reservation.ref }}</td>
+                    <td>{{ reservation.type }}</td>
+                    <td>{{ reservation.dateArriveeH|date("d/m/Y") }}</td>
+                    <td>{{ reservation.dateSortieH|date("d/m/Y") }}</td>
+                    <td>{{ reservation.nbreNuits }}</td>
+                    <td>{{ reservation.prixTotal }}</td>
+                    <td>{{ reservation.dateCreation|date("d/m/Y") }}</td>
+                    <td><a href="{{ path('deleteReservation',{'ref':reservation.ref}) }}">Delete Reservation</a></td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+
+        <h5>list of hotel reservations</h5>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ref</th>
+                <th>type</th>
+                <th>Date of arrival</th>
+                <th>Date of departure </th>
+                <th>Night's number</th>
+                <th>Adult's Number</th>
+                <th>Children's number</th>
+                <th>Single Room</th>
+                <th>Double Room</th>
+                <th>Price</th>
+                <th>date of booking</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for reservation in Reservations if reservation.type|upper=="HOTEL" and reservation.dateSortieH|date("d/m/Y")<"now"|date("d/m/Y") %}
+                <tr>
+                    <td>{{ reservation.ref }}</td>
+                    <td>{{ reservation.type }}</td>
+                    <td>{{ reservation.dateArriveeH|date("d/m/Y") }}</td>
+                    <td>{{ reservation.dateSortieH|date("d/m/Y") }}</td>
+                    <td>{{ reservation.nbreNuits }}</td>
+                    <td>{{ reservation.nbreAdultes }}</td>
+                    <td>{{ reservation.nbreEnfants }}</td>
+                    <td>{{ reservation.nbreChbreSingle }}</td>
+                    <td>{{ reservation.nbreChbreDouble }}</td>
+                    <td>{{ reservation.prixTotal }}</td>
+                    <td>{{ reservation.dateCreation|date("d/m/Y") }}</td>
+                    <td><a href="{{ path('deleteReservation',{'ref':reservation.ref}) }}">Delete Reservation</a></td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+
+        <h5>list of flight reservations</h5>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ref</th>
+                <th>type</th>
+                <th>Date of arrival</th>
+                <th>Date of departure </th>
+
+                <th>Price</th>
+                <th>date of reserving</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for reservation in Reservations if reservation.type|upper=="VOL" and reservation.dateSortieH|date("d/m/Y")<"now"|date("d/m/Y") %}
+                <tr>
+                    <td>{{ reservation.ref }}</td>
+                    <td>{{ reservation.type }}</td>
+                    <td>{{ reservation.dateArriveeH|date("d/m/Y") }}</td>
+                    <td>{{ reservation.getRefVolFk().datedepartaller|date("d/m/Y") }}</td>
+
+                    <td>{{ reservation.prixTotal }}</td>
+                    <td>{{ reservation.dateCreation|date("d/m/Y") }}</td>
+                    <td><a href="{{ path('deleteReservation',{'ref':reservation.ref}) }}">Delete Reservation</a></td>
+
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+{% block map %}
+
+
+
+{% endblock %}
